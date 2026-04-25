@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://qaf-coffee.vercel.app/sitemap.xml
+Sitemap: https://qaf-wine.vercel.app/sitemap.xml
