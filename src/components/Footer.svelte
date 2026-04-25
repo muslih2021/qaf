@@ -5,11 +5,6 @@
 <footer class="footer-section">
   <div class="container">
     <div class="footer-layout">
-      <!-- Kiri: Logo -->
-      <div class="footer-brand">
-        <h2 class="footer-logo">qaf</h2>
-      </div>
-
       <!-- Tengah: Copyright -->
       <div class="footer-bottom">
         <p>&copy; 2026 Qaf Coffee & Eatery. All rights reserved.</p>
@@ -53,27 +48,10 @@
     gap: 1rem;
   }
 
-  .footer-brand {
-    display: flex;
-    align-items: center;
-  }
-
-  .footer-logo {
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    font-weight: 600;
-    font-style: italic;
-    color: var(--bg-cream);
-    letter-spacing: -1px;
-    line-height: 1;
-    margin: 0;
-  }
-
   .footer-bottom {
     font-size: 0.85rem;
     color: rgba(253, 251, 247, 0.5);
     font-family: var(--font-body);
-    text-align: center;
     margin: 0;
   }
 
@@ -113,18 +91,13 @@
     }
 
     .footer-layout {
-      flex-direction: column;
+      flex-direction: column-reverse; /* Balik urutan: Social media di atas, copyright di bawah */
       text-align: center;
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
     .footer-bottom {
-      order: 3; /* Pindah ke paling bawah di HP */
       margin-top: 0.5rem;
-    }
-    
-    .footer-socials {
-      order: 2; /* Pindah ke tengah di HP */
     }
   }
 </style>
