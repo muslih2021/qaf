@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qaf Coffee & Eatery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+      #global-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+        background-color: #FDFBF7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+      }
+      .loader-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1;
+        text-align: center;
+        animation: pulse 1.2s ease-in-out infinite alternate;
+      }
+      .loader-qaf {
+        font-family: 'Playfair Display', serif;
+        font-size: 5rem;
+        font-weight: 600;
+        font-style: italic;
+        color: #C16A31;
+        letter-spacing: -2px;
+        margin-bottom: -5px;
+      }
+      .loader-sub {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #3A2618;
+      }
+      @keyframes pulse {
+        0% { opacity: 0.5; transform: scale(0.95); }
+        100% { opacity: 1; transform: scale(1.05); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="global-loader">
+      <div class="loader-logo">
+        <span class="loader-qaf">qaf</span>
+        <span class="loader-sub">coffee and eatery</span>
+      </div>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --bg-cream: #FDFBF7;
+  --bg-secondary: #F3EFE9;
+  --color-primary: #C16A31; /* Qaf Logo Orange-Brown */
+  --color-dark: #3A2618; /* Espresso Brown */
+  --color-light-text: #7A6051;
+  
+  --font-body: 'Outfit', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  
+  --border-radius-sm: 8px;
+  --border-radius-lg: 24px;
+  
+  --shadow-soft: 0 10px 30px rgba(58, 38, 24, 0.08);
+  --shadow-hover: 0 15px 40px rgba(193, 106, 49, 0.15);
+  
+  --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-cream);
+  color: var(--color-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 8rem 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  letter-spacing: -0.5px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-primary);
+  margin: 1rem auto 0;
+}
+
+/* Minimalist Button Utilities */
+.btn-primary {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: var(--color-dark);
+  color: var(--bg-cream);
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid var(--color-dark);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-dark);
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--bg-cream);
+}
+
+/* Card Utilities */
+.minimal-card {
+  background-color: #FFFFFF;
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  border: 1px solid rgba(58, 38, 24, 0.03);
+}
+
+.minimal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Typography utilities */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-muted {
+  color: var(--color-light-text);
+}
+
+/* Specific section backgrounds */
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+/* Scroll Animations */
+.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.parallax-bg { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+
+/* Global Responsive Adjustments */
+@media (max-width: 1024px) {
+  section {
+    padding: 6rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4.5rem 0;
+  }
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 3.5rem 0;
+  }
+  .container {
+    padding: 0 1.25rem;
+  }
+  body {
+    font-size: 0.95rem; /* Slight reduction in base font size for tiny screens */
+  }
+}
