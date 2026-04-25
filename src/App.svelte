@@ -7,6 +7,7 @@
   import Gallery from './components/Gallery.svelte';
   import Reviews from './components/Reviews.svelte';
   import Reservation from './components/Reservation.svelte';
+  import Footer from './components/Footer.svelte';
   import Loader from './components/Loader.svelte';
 </script>
 
@@ -24,4 +25,5 @@
   <Gallery />
   <Reviews />
   <Reservation />
+  <Footer />
 </main>
